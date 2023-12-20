@@ -1,0 +1,374 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: #009688;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar */
+nav {
+    background-color: #009688;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white; /* Ensures text is white for better visibility */
+    text-decoration: none;
+    font-weight: bold; /* Optional: Makes the text bold */
+}
+
+nav a:hover {
+    color: #F5722; /* Color changes when hovering */
+}
+
+
+/* Hero Section */
+header {
+    background-color: #F5722; /* Deep orange background */
+    color: #fff; /* Change text color to white for visibility */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2.5em;
+    z-index: 2;
+    position: relative;
+}
+
+header p {
+    font-size: 1.2em;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-call-to-action {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-call-to-action a.btn {
+    /* Button styles */
+}
+
+/* ... other styles ... */
+
+
+/* About Us Section */
+#about {
+    background-color: #FFEB3B;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Membership Plans Section */
+#membership {
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap as needed */
+    justify-content: space-around; /* Distributes space around the items */
+    align-items: flex-start; /* Aligns items to the start of the cross axis */
+}
+
+.membership-option {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px; /* Margin around each item for spacing */
+    flex-basis: calc(33% - 20px); /* Width of each item minus margin */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+.membership-option .price {
+    color: #009688;
+    font-weight: bold;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .membership-option {
+        flex-basis: calc(50% - 20px); /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-option {
+        flex-basis: 100%; /* Full width for small screens */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .membership-option {
+        flex: 0 0 45%; /* Increase width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-option {
+        flex: 0 0 100%; /* Full width for very small screens */
+    }
+}
+
+
+
+/* Class Schedule Section */
+#schedule {
+    background-color: #F5722; /* Deep orange background */
+    color: #fff; /* White text for better visibility */
+    padding: 20px;
+    text-align: center;
+}
+
+#schedule h2 {
+    color: #fff; /* Ensure the heading is white for visibility */
+    margin-bottom: 15px;
+    font-size: 2em; /* Optionally increase the size for emphasis */
+}
+
+.class-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* White background for the table */
+    color: #333; /* Dark text for contrast */
+}
+
+.class-schedule th, .class-schedule td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.class-schedule th {
+    background-color: #009688; /* Teal background for headers */
+    color: white; /* White text for headers */
+}
+
+
+@media (max-width: 768px) {
+    /* Adjust grid-template-columns in the Membership Plans Section for mobile */
+    #membership {
+        grid-template-columns: 1fr;
+    }
+
+    .class-schedule table {
+        font-size: 0.8em; /* Smaller font size for better fit on mobile screens */
+    }
+}
+
+
+/* Calorie Burn Calculator Section */
+.calculator-section {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator-container {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"].btn {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"].btn:hover {
+    background-color: #F5722;
+}
+
+.result-display {
+    margin-top: 20px;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+
+/* Contact Us Section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-details, .contact-form {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.newsletter {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #membership {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Utility Classes */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    background: #009688;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #F5722;
+}
+/* Personal Training Section */
+#personal-training {
+    background-color: #009688; /* Teal background */
+    color: #fff; /* White text for better visibility */
+    padding: 20px;
+    text-align: center;
+}
+
+.trainer {
+    margin-bottom: 20px;
+}
+/* Class Schedule Section */
+#schedule {
+    background-color: #F5722; /* Deep orange background */
+    color: #fff; /* White text for better visibility */
+    padding: 20px;
+    text-align: center;
+    color:#009688;
+}
+
+#schedule h2 {
+    color:#009688; /* Ensure the heading is white for visibility */
+    margin-bottom: 15px;
+    font-size: 2em; /* Optionally increase the size for emphasis */
+}
+
+.class-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* White background for the table */
+    color: #333; /* Dark text for contrast */
+}
+
+.class-schedule th, .class-schedule td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.class-schedule th {
+    background-color: #009688; /* Teal background for headers */
+    color: white; /* White text for headers */
+}
